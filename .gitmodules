@@ -1,0 +1,9 @@
+[submodule "openssl"]
+	path = openssl
+	url = git@github.com:opscode-cookbooks/openssl.git
+[submodule "git"]
+	path = git
+	url = git@github.com:opscode-cookbooks/git.git
+[submodule "chef-curl"]
+	path = chef-curl
+	url = git@github.com:phlipper/chef-curl.git
