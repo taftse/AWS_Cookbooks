@@ -5,5 +5,5 @@
 	path = git
 	url = git@github.com:opscode-cookbooks/git.git
 [submodule "chef-curl"]
-	path = chef-curl
+	path = curl
 	url = git@github.com:phlipper/chef-curl.git
