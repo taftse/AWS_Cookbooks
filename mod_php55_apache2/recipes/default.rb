@@ -1,4 +1,4 @@
-include_recipe 'apache2'
+include_recipe 'apache24'
 
 node[:mod_php5_apache2][:packages].each do |pkg|
   package pkg do
@@ -6,4 +6,4 @@ node[:mod_php5_apache2][:packages].each do |pkg|
   end
 end
 
-include_recipe 'apache2::mod_php5'
+include_recipe 'apache24::mod_php5'
