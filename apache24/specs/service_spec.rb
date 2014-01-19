@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::service' do
+describe_recipe 'apache24::service' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 

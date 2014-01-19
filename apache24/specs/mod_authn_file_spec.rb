@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::mod_authn_file' do
+describe_recipe 'apache24::mod_authn_file' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
   before :all do

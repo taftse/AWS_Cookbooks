@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::mod_proxy_http' do
+describe_recipe 'apache24::mod_proxy_http' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 

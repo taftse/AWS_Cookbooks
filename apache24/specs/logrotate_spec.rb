@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::logrotate' do
+describe_recipe 'apache24::logrotate' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 

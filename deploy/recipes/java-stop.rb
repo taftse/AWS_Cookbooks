@@ -13,7 +13,7 @@ node[:deploy].each do |application, deploy|
     notifies :stop, "service[#{node['opsworks_java']['java_app_server']}]"
   end
 
-  include_recipe 'apache2::service'
+  include_recipe 'apache24::service'
   
   service 'apache2' do
     action :stop

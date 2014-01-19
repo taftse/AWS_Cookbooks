@@ -1,16 +1,16 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::default' do
+describe_recipe 'apache24::default' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 
   describe 'packages' do
-    it 'installs the apache2 package' do
+    it 'installs the apache24 package' do
       case node[:platform]
       when 'debian','ubuntu'
         package('apache2').must_be_installed
       when 'centos','redhat','fedora','amazon'
-        package('httpd').must_be_installed
+        package('httpd24').must_be_installed
       else
         fail_test "Your OS (#{node[:platform]}) is not supported."
       end

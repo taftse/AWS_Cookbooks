@@ -21,10 +21,10 @@ define :web_app, :template => 'web_app.conf.erb' do
   
   application_name = params[:name]
 
-  include_recipe 'apache2'
-  include_recipe 'apache2::mod_rewrite'
-  include_recipe 'apache2::mod_deflate'
-  include_recipe 'apache2::mod_headers'
+  include_recipe 'apache24'
+  include_recipe 'apache24::mod_rewrite'
+  include_recipe 'apache24::mod_deflate'
+  include_recipe 'apache24::mod_headers'
   
   directory "#{node[:apache][:dir]}/sites-available/#{application_name}.conf.d"
   params[:rewrite_config] = "#{node[:apache][:dir]}/sites-available/#{application_name}.conf.d/rewrite"

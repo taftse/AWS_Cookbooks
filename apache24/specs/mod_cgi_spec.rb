@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::mod_cgi' do
+describe_recipe 'apache24::mod_cgi' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 

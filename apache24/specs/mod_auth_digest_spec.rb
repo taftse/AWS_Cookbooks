@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::mod_auth_digest' do
+describe_recipe 'apache24::mod_auth_digest' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
 

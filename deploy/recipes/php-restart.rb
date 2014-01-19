@@ -4,7 +4,7 @@
 #
 
 include_recipe "deploy"
-include_recipe "apache2::service"
+include_recipe "apache24::service"
 
 node[:deploy].each do |application, deploy|
   if deploy[:application_type] != 'php'

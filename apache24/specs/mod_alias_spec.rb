@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe 'apache2::mod_alias' do
+describe_recipe 'apache24::mod_alias' do
   include MiniTest::Chef::Resources
   include MiniTest::Chef::Assertions
   before :all do
