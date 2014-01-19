@@ -11,8 +11,8 @@ recipe "deploy::logrotate", "Logrotate configuration for log files in shared/log
 recipe "deploy::java", "Deploy a Java application"
 
 depends "dependencies"
-depends "apache2"
-depends "mod_php5_apache2"
+depends "apache24"
+depends "mod_php55_apache2"
 depends "nginx"
 depends "ssh_users"
 depends "opsworks_agent_monit"

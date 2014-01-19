@@ -41,4 +41,4 @@ when 'rhel'
   ]
 end
 
-default[:mod_php5_apache2][:packages] = packages
+default[:mod_php55_apache2][:packages] = packages

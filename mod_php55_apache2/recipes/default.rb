@@ -1,6 +1,6 @@
 include_recipe 'apache24'
 
-node[:mod_php5_apache2][:packages].each do |pkg|
+node[:mod_php55_apache2][:packages].each do |pkg|
   package pkg do
     action :install
   end
