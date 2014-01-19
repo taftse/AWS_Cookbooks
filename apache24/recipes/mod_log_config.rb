@@ -20,5 +20,5 @@
 if platform?('centos','redhat','fedora','amazon')
   apache_module 'log_config'
 else
-  include_recipe 'apache2'
+  include_recipe 'apache24'
 end

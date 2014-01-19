@@ -20,7 +20,7 @@
 if platform?('debian','ubuntu')
   package 'libapache2-mod-python'
 elsif platform?('centos','redhat', 'fedora','amazon')
-  package 'mod_python'
+  package 'mod24_python'
 end
 
 apache_module 'python'

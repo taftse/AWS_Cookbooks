@@ -1,4 +1,4 @@
-include_recipe "apache2::service"
+include_recipe "apache24::service"
 
 service "apache2" do
   action :stop

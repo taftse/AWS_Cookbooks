@@ -20,7 +20,7 @@
 if platform?('debian', 'ubuntu')
   package 'libapache2-mod-fcgid'
 elsif platform?('centos', 'redhat', 'fedora', 'amazon')
-  package 'mod_fcgid' do
+  package 'mod24_fcgid' do
     notifies :run, "execute[generate-module-list]", :immediately
   end
 

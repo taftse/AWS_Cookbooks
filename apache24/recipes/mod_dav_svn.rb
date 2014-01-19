@@ -19,7 +19,7 @@
 
 case node[:platform]
 when 'centos', 'redhat', 'fedora', 'amazon'
-  package 'mod_dav_svn'
+  package 'mod24_dav_svn'
 when 'debian', 'ubuntu'
   package 'libapache2-svn'
 end
