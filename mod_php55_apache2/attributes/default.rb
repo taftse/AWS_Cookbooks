@@ -23,8 +23,8 @@ when 'debian'
   ]
 when 'rhel'
   packages = [
-    'php55-xml',
     'php55-common',
+    'php55-xml',    
     'php55-xmlrpc',
     'php55-devel',
     'php55-gd',
