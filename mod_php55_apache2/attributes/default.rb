@@ -23,22 +23,22 @@ when 'debian'
   ]
 when 'rhel'
   packages = [
-    'php55-common',
-    'php55-xml',    
-    'php55-xmlrpc',
-    'php55-devel',
-    'php55-gd',
-    'php55-cli',
-    'php55-pear-Auth-SASL',
-    'php55-mysql',
-    'php55-mcrypt',
-    'php55-pecl-memcache',
-    'php55-pear',
-    'php55-pear-XML-Parser',
-    'php55-pear-Mail-Mime',
-    'php55-pear-DB',
-    'php55-pear-HTML-Common'
+    'php55w-common-5.5.6',
+    'php55w-xml-5.5.6',    
+    'php55w-xmlrpc-5.5.6',
+    'php55w-devel-5.5.6',
+    'php55w-gd-5.5.6',
+    'php55w-cli-5.5.6',
+    'php55w-pear-Auth-SASL-5.5.6',
+    'php55w-mysql-5.5.6',
+    'php55w-mcrypt-5.5.6',
+    'php55w-pecl-memcache-5.5.6',
+    'php55w-pear-5.5.6',
+    'php55w-pear-XML-Parser-5.5.6',
+    'php55w-pear-Mail-Mime-5.5.6',
+    'php55w-pear-DB-5.5.6',
+    'php55w-pear-HTML-Common-5.5.6'
   ]
 end
 
-default[:mod_php55_apache2][:packages] = packages
+default[:mod_php55w_apache2][:packages] = packages
