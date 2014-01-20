@@ -18,7 +18,7 @@ describe_recipe 'apache24::mod_php5' do
     when 'debian','ubuntu'
       package('libapache2-mod-php5').must_be_installed
     when 'centos','redhat','fedora','amazon'
-      package('php').must_be_installed
+      package('php55').must_be_installed
     end
   end
 
