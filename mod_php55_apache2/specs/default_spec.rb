@@ -39,7 +39,7 @@ describe_recipe 'mod_php55_apache2::default' do
         'php55-mysql',
         'php55-mcrypt',
         'php55-pecl-memcache',
-        'php55-pear',
+        'php-pear',
         'php55-pear-XML-Parser',
         'php55-pear-Mail-Mime',
         'php55-pear-DB',
