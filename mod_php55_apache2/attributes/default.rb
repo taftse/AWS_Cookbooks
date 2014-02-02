@@ -29,15 +29,15 @@ when 'rhel'
     'php55-devel',
     'php55-gd',
     'php55-cli',
-    'php55-pear-Auth-SASL',
+    'php-pear-Auth-SASL',
     'php55-mysql',
     'php55-mcrypt',
     'php55-pecl-memcache',
-    'php55-pear',
-    'php55-pear-XML-Parser',
-    'php55-pear-Mail-Mime',
-    'php55-pear-DB',
-    'php55-pear-HTML-Common'
+    'php-pear',
+    'php-pear-XML-Parser',
+    'php-pear-Mail-Mime',
+    'php-pear-DB',
+    'php-pear-HTML-Common'
   ]
 end
 
