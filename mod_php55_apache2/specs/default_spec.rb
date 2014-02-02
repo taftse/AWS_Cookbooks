@@ -30,7 +30,7 @@ describe_recipe 'mod_php55_apache2::default' do
     when 'redhat', 'centos', 'fedora', 'amazon'
       packages = [
         'php55w-xml-5.5.6',
-        'php55-common',
+        'php55-common-5.5.6',
         'php55w-xmlrpc-5.5.6',
         'php55w-devel-5.5.6',
         'php55w-gd-5.5.6',
