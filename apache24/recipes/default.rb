@@ -31,7 +31,7 @@ include_recipe 'apache24::service'
 
 service 'apache2' do
   service_name value_for_platform(
-    ['centos','redhat','fedora','amazon'] => {'default' => 'httpd24'},
+    ['centos','redhat','fedora','amazon'] => {'default' => 'httpd'},
     'default' => 'apache2'
   )
   action :enable
