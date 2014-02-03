@@ -184,6 +184,7 @@ include_recipe 'apache24::mod_mime'
 include_recipe 'apache24::mod_mpm_prefork'
 include_recipe 'apache24::mod_negotiation'
 include_recipe 'apache24::mod_setenvif'
+include_recipe 'apache24::mod_socache_shmcb'
 include_recipe 'apache24::mod_log_config' if platform?('centos','redhat','amazon')
 include_recipe 'apache24::mod_ssl'
 include_recipe 'apache24::mod_expires'
