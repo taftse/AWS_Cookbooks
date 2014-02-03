@@ -8,11 +8,9 @@ ServerRoot "<%= node[:apache][:dir] %>"
 #
 # The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
 #
-<% if node[:platform] == "debian" || node[:platform] == "ubuntu" -%>
-Mutex file:${APACHE_LOCK_DIR} default
-<% else %>
-Mutex file:${APACHE_LOCK_DIR} default
-<% end -%>
+
+Mutex default
+
 
 #
 # PidFile: The file in which the server should record its process
