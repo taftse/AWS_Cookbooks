@@ -37,6 +37,7 @@ recipe            "apache24::mod_rewrite", "Apache module 'rewrite'"
 recipe            "apache24::mod_setenvif", "Apache module 'setenvif' with config file"
 recipe            "apache24::mod_ssl", "Apache module 'ssl' with config file, adds port 443 to listen_ports"
 recipe            "apache24::mod_status", "Apache module 'status' with config file"
+recipe            "apache24::mod_mpm_prefork", ""
 recipe            "apache24::logrotate", "Apache Logrotate configuration"
 
 ['centos','redhat','fedora','amazon','debian','ubuntu'].each do |os|
