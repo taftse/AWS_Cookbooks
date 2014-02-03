@@ -52,31 +52,31 @@ KeepAliveTimeout <%= node[:apache][:keepalivetimeout] %>
 # StartServers: number of server processes to start
 # MinSpareServers: minimum number of server processes which are kept spare
 # MaxSpareServers: maximum number of server processes which are kept spare
-# MaxClients: maximum number of server processes allowed to start
-# MaxRequestsPerChild: maximum number of requests a server process serves
+# MaxRequestWorkers: maximum number of server processes allowed to start
+# MaxConnectionsPerChild: maximum number of requests a server process serves
 <IfModule mpm_prefork_module>
-    StartServers          <%= node[:apache][:prefork][:startservers] %>
-    MinSpareServers       <%= node[:apache][:prefork][:minspareservers] %>
-    MaxSpareServers       <%= node[:apache][:prefork][:maxspareservers] %>
-    ServerLimit           <%= node[:apache][:prefork][:serverlimit] %>
-    MaxClients            <%= node[:apache][:prefork][:maxclients] %>
-    MaxRequestsPerChild   <%= node[:apache][:prefork][:maxrequestsperchild] %>
+    StartServers             <%= node[:apache][:prefork][:startservers] %>
+    MinSpareServers          <%= node[:apache][:prefork][:minspareservers] %>
+    MaxSpareServers          <%= node[:apache][:prefork][:maxspareservers] %>
+    ServerLimit              <%= node[:apache][:prefork][:serverlimit] %>
+    MaxRequestWorkers        <%= node[:apache][:prefork][:MaxRequestWorkers] %>
+    MaxConnectionsPerChild   <%= node[:apache][:prefork][:MaxConnectionsPerChild] %>
 </IfModule>
 
 # worker MPM
 # StartServers: initial number of server processes to start
-# MaxClients: maximum number of simultaneous client connections
+# MaxRequestWorkers: maximum number of simultaneous client connections
 # MinSpareThreads: minimum number of worker threads which are kept spare
 # MaxSpareThreads: maximum number of worker threads which are kept spare
 # ThreadsPerChild: constant number of worker threads in each server process
-# MaxRequestsPerChild: maximum number of requests a server process serves
+# MaxConnectionsPerChild: maximum number of requests a server process serves
 <IfModule mpm_worker_module>
-    StartServers          <%= node[:apache][:worker][:startservers] %>
-    MaxClients            <%= node[:apache][:worker][:maxclients] %>
-    MinSpareThreads       <%= node[:apache][:worker][:minsparethreads] %>
-    MaxSpareThreads       <%= node[:apache][:worker][:maxsparethreads] %>
-    ThreadsPerChild       <%= node[:apache][:worker][:threadsperchild] %>
-    MaxRequestsPerChild   <%= node[:apache][:worker][:maxrequestsperchild] %>
+    StartServers             <%= node[:apache][:worker][:startservers] %>
+    MaxRequestWorkers        <%= node[:apache][:worker][:MaxRequestWorkers] %>
+    MinSpareThreads          <%= node[:apache][:worker][:minsparethreads] %>
+    MaxSpareThreads          <%= node[:apache][:worker][:maxsparethreads] %>
+    ThreadsPerChild          <%= node[:apache][:worker][:threadsperchild] %>
+    MaxConnectionsPerChild   <%= node[:apache][:worker][:MaxConnectionsPerChild] %>
 </IfModule>
 
 User <%= node[:apache][:user] %>

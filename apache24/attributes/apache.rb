@@ -75,16 +75,16 @@ default[:apache][:prefork][:startservers] = 16
 default[:apache][:prefork][:minspareservers] = 16
 default[:apache][:prefork][:maxspareservers] = 32
 default[:apache][:prefork][:serverlimit] = 400
-default[:apache][:prefork][:maxclients] = 400
-default[:apache][:prefork][:maxrequestsperchild] = 10000
+default[:apache][:prefork][:MaxRequestWorkers] = 400
+default[:apache][:prefork][:MaxConnectionsPerChild] = 10000
 
 # Worker Attributes
 default[:apache][:worker][:startservers] = 4
-default[:apache][:worker][:maxclients] = 1024
+default[:apache][:worker][:MaxRequestWorkers] = 1024
 default[:apache][:worker][:minsparethreads] = 64
 default[:apache][:worker][:maxsparethreads] = 192
 default[:apache][:worker][:threadsperchild] = 64
-default[:apache][:worker][:maxrequestsperchild] = 10000
+default[:apache][:worker][:MaxConnectionsPerChild] = 10000
 
 # logrotate
 default[:apache][:logrotate][:schedule] = 'daily'

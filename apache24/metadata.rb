@@ -144,13 +144,13 @@ attribute "apache/prefork/serverlimit",
   :description => "Upper limit on configurable server processes",
   :default => "400"
 
-attribute "apache/prefork/maxclients",
-  :display_name => "Apache Prefork MPM MaxClients",
+attribute "apache/prefork/MaxRequestWorkers",
+  :display_name => "Apache Prefork MPM MaxRequestWorkers",
   :description => "Maximum number of simultaneous connections",
   :default => "400"
 
-attribute "apache/prefork/maxrequestsperchild",
-  :display_name => "Apache Prefork MPM MaxRequestsPerChild",
+attribute "apache/prefork/MaxConnectionsPerChild",
+  :display_name => "Apache Prefork MPM MaxConnectionsPerChild",
   :description => "Maximum number of request a child process will handle",
   :default => "10000"
 
@@ -164,8 +164,8 @@ attribute "apache/worker/startservers",
   :description => "Initial number of server processes to start",
   :default => "4"
 
-attribute "apache/worker/maxclients",
-  :display_name => "Apache Worker MPM MaxClients",
+attribute "apache/worker/MaxRequestWorkers",
+  :display_name => "Apache Worker MPM MaxRequestWorkers",
   :description => "Maximum number of simultaneous connections",
   :default => "1024"
 
@@ -184,7 +184,7 @@ attribute "apache/worker/threadsperchild",
   :description => "Constant number of worker threads in each server process",
   :default => "64"
 
-attribute "apache/worker/maxrequestsperchild",
-  :display_name => "Apache Worker MPM MaxRequestsPerChild",
+attribute "apache/worker/MaxConnectionsPerChild",
+  :display_name => "Apache Worker MPM MaxConnectionsPerChild",
   :description => "Maximum number of request a child process will handle",
   :default => "0"
