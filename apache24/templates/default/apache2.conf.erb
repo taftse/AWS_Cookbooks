@@ -93,8 +93,7 @@ AccessFileName .htaccess
 # viewed by Web clients. 
 #
 <Files ~ "^\.ht">
-    Order allow,deny
-    Deny from all
+    Require all granted
 </Files>
 
 #
