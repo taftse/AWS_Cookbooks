@@ -178,6 +178,7 @@ include_recipe 'apache24::mod_autoindex'
 include_recipe 'apache24::mod_dir'
 include_recipe 'apache24::mod_env'
 include_recipe 'apache24::mod_mime'
+include_recipe 'apache24::mod_mpm_prefork'
 include_recipe 'apache24::mod_negotiation'
 include_recipe 'apache24::mod_setenvif'
 include_recipe 'apache24::mod_log_config' if platform?('centos','redhat','amazon')
