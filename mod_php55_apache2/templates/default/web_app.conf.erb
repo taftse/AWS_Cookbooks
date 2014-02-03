@@ -30,7 +30,7 @@
   FileETag none
 
   RewriteEngine On
-  IncludeOptional <%= @params[:rewrite_config] %> *
+  IncludeOptional <%= @params[:rewrite_config] %>*
   RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   RewriteLogLevel 0
   
