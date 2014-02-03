@@ -38,7 +38,7 @@
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
   <% end -%>
 
-  Include <%= @params[:local_config] %>*
+  IncludeOptional <%= @params[:local_config] %>*
 </VirtualHost>
 
 <% if node[:deploy][@application_name][:ssl_support] -%>
@@ -91,6 +91,6 @@
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
   <% end -%>
   
-  Include <%= @params[:local_config] %>-ssl*
+  IncludeOptional <%= @params[:local_config] %>-ssl*
 </VirtualHost>
 <% end -%>
