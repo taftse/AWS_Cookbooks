@@ -49,11 +49,9 @@ SSLSessionCacheTimeout  300
 #   Semaphore:
 #   Configure the path to the mutual exclusion semaphore the
 #   SSL engine uses internally for inter-process synchronization. 
-<% if ['centos','redhat','fedora','amazon'].include?(node[:platform]) -%>
-SSLMutex  default
-<% else -%>
-SSLMutex  file:/var/run/apache2/ssl_mutex
-<% end -%>
+
+Mutex  default
+
 
 #   SSL Cipher Suite:
 #   List the ciphers that the client is permitted to negotiate.
