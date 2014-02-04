@@ -165,6 +165,7 @@ template "#{node[:apache][:dir]}/sites-available/default" do
   notifies :run, resources(:execute => 'logdir_existence_and_restart_apache2')
 end
 
+include_recipe 'apache24::mod_access_compat'
 include_recipe 'apache24::mod_status'
 include_recipe 'apache24::mod_headers'
 include_recipe 'apache24::mod_alias'
@@ -173,7 +174,6 @@ include_recipe 'apache24::mod_authn_file'
 #include_recipe 'apache24::mod_authz_default'
 include_recipe 'apache24::mod_authz_groupfile'
 include_recipe 'apache24::mod_authz_host'
-include_recipe 'apache24::mod_access_compat'
 include_recipe 'apache24::mod_filter'
 include_recipe 'apache24::mod_authz_user'
 include_recipe 'apache24::mod_unixd'
