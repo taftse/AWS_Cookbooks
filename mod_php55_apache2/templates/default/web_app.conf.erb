@@ -31,8 +31,8 @@
 
   RewriteEngine On
   IncludeOptional <%= @params[:rewrite_config] %>*
-  RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
-  RewriteLogLevel 0
+  LogLevel  <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
+  LogLevel  warn
   
   <% if @params[:mounted_at] -%>
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
@@ -84,9 +84,9 @@
 
   RewriteEngine On
   IncludeOptional <%= @params[:rewrite_config] %>-ssl*
-  RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
-  RewriteLogLevel 0
-  
+  LogLevel  <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
+  LogLevel warn
+
   <% if @params[:mounted_at] -%>
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
   <% end -%>
