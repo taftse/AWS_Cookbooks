@@ -31,8 +31,8 @@
 
   RewriteEngine On
   IncludeOptional <%= @params[:rewrite_config] %>*
-  LogLevel  <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
-  LogLevel  warn
+
+  LogLevel  warn rewrite:warn
   
   <% if @params[:mounted_at] -%>
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
