@@ -83,7 +83,7 @@
   FileETag none
 
   RewriteEngine On
-  LogLevel warn rewrite
+  LogLevel warn rewrite:warn
 
   <% if @params[:mounted_at] -%>
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
