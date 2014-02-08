@@ -3,6 +3,7 @@ node[:deploy].each do |application, deploy|
 	  owner "deploy"
 	  group "apache"
 	  mode 0777
+	  recursive true
 	  action :create
 	end
 end
