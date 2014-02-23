@@ -30,7 +30,7 @@ when 'rhel'
     'php55-gd',
     'php55-cli',
     'php-pear-Auth-SASL',
-   # 'php-mysql',
+    'php55-mysqlnd',
     'php55-pdo',
     'php55-mcrypt',
     'php55-pecl-memcache',
