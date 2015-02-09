@@ -1,5 +1,5 @@
 #node[:deploy].each do |application, deploy|
-#	directory "#{deploy[:deploy_to]}/current/app/storage" do
+#	directory "#{deploy[:deploy_to]}/current/storage" do
 #	  owner "deploy"
 #	  group "apache"
 #	  mode 777
@@ -9,7 +9,7 @@
 #end
 
 node[:deploy].each do |application, deploy|
-  app_root = "#{deploy[:deploy_to]}/current/app/storage"
+  app_root = "#{deploy[:deploy_to]}/current/storage"
   execute "chmod -R g+rw #{app_root}" do
   end
 end
